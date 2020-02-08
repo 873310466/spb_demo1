@@ -1,0 +1,38 @@
+#连接数据库
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/hospital?useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true&useUnicode=true&characterEncoding=utf8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+  messages:
+    basename: i18n.login
+  # 配置邮箱
+  mail:
+    username: 873310466@qq.com
+    password: jwaizqbbrmqgbeie
+    host: smtp.qq.com
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+
+# 整合mybatis
+mybatis:
+  type-aliases-package: com.lemonfish.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
+server:
+  port: 80
+  servlet:
+    context-path: /
+
+logging:
+  level:
+    com:
+      lemonfish:
+        mapper: debug
+

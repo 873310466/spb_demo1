@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Signin Template for Bootstrap</title>
+  <!-- Bootstrap core CSS -->
+  <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link th:href="@{/css/signin.css}" rel="stylesheet">
+<!--  <link rel="stylesheet" th:href="@{/css/login.css}">-->
+  <link href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" th:href="@{css/build.css}">
+  <script type="text/javascript">
+		function changeState(el) {
+			if (el.readOnly) el.checked=el.readOnly=false;
+			// else if (!el.checked) el.readOnly=el.indeterminate=true;
+		}
+  </script>
+</head>
+
+<body class="text-center login-bg">
+<form class="form-signin"  method="get" th:action="@{/toLogin}">
+  <img class="mb-4 img-rounded" th:src="@{/img/polo.png}" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}"></h1>
+
+  <!--    <p style="color: red" th:if="${msg}" th:text="${msg}"></p>-->
+
+  <label class="sr-only">Username</label>
+  <input type="text" name="username" class="form-control" th:placeholder="#{login.username}" required="" autofocus="">
+  <label class="sr-only" th:for="password">Password</label>
+  <input type="password" name="password" id="password" class="form-control" th:placeholder="#{login.password}"
+         required="">
+  <div class=" mb-3 ">
+    <label>
+      <input type="checkbox" class="checkbox-info"  value="remember-me" onclick="changeState(this)"> [[#{login.remember}]]
+    </label>
+  </div>
+  <br>
+  <button class="btn btn-lg btn-primary btn-block" type="submit" th:text="#{login.btn}"></button>
+  <br>
+  <a class="btn btn-sm" th:href="@{/login.html(l='zh_CN')}">中文</a>
+  <a class="btn btn-sm" th:href="@{/login.html(l='en_US')}">English</a>
+  <a class="btn btn-sm" th:href="@{/login.html(l='ja_JP')}">日本語</a>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div>  Copyright © 2020 云医院&nbsp;&nbsp;&nbsp;All rights reserved.&nbsp;
+  </div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 地址：二舍B250  张超</div>
+
+</form>
+<br/>
+
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <!--引入bootstrap-->
+  <script th:src="@{/js/jquery-3.2.1.slim.min.js}"></script>
+  <script th:src="@{/js/bootstrap.min.js}"></script>
+  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+
+  <style>
+    /*h3 {
+      border: red 1px solid;
+      width: 400px;
+      height: 60px;
+      font-size: 40px;
+      margin: 300px auto;
+      line-height: 60px;
+      text-align: center;
+      background-color: skyblue;
+      border-radius: 10px;
+    }*/
+    a {
+      color: deeppink;
+      text-decoration: none;
+    }
+  </style>
+
+</head>
+<body>
+<!--
+<div class="page-header">
+  <h1>Example page header <small>Subtext for header</small></h1>
+</div>
+-->
+
+
+<div class="jumbotron">
+  <div class="container" align="center">
+    <img class="img-circle" style="width: 90px;height: 90px" th:src="@{/img/polo.png}">
+    <h2 class="text-info" style="font-family:宋体;font-weight:bold;font-size:100px">云医院</h2>
+    <br>
+    <div class="text-muted" style="font-size: 30px">为您健康负责</div>
+    <br>
+    <br>
+    <p><a role="button" href="#" class="btn btn-success btn-lg">患者挂号</a></p>
+    <br>
+    <br>
+
+    <p><a class="btn-primary btn btn-lg" th:href="@{/toLogin}">院方登录</a></p>
+
+    <h2 class="text-info" style="font-family:宋体;font-weight:bold;font-size:49px"></h2>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div th:replace="~{common.html::footer}"></div>
+
+  </div>
+</div>
+
+</body>
+
+</html>
