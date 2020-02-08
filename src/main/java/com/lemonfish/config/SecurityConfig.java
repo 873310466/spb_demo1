@@ -24,7 +24,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         //首页所有人可以访问,但是功能页只能有权限的人访问
         http.authorizeRequests().antMatchers("/").permitAll();
-//                .antMatchers("/main.html").hasRole("vip1");
+//                .antMatchers("/admin.html").hasRole("vip1");
 //                .antMatchers("/level2/**").hasRole("vip2")
 //                .antMatchers("/level3/**").hasRole("vip3");
 

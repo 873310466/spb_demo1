@@ -26,6 +26,7 @@ public class CommonController {
         return "index";
     }
 
+
     @RequestMapping("/toCommon")
     public String toCommon(@RequestParam("test") String test, Model model) {
         model.addAttribute("test", test);
