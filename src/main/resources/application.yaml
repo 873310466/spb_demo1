@@ -36,3 +36,11 @@ logging:
       lemonfish:
         mapper: debug
 
+
+#Github
+github:
+  client:
+    id: e4e0eaca117ce863a941
+    secret: 1c7b95837c8aa8cc5c429c49060af6a162a23f4c
+  redirect:
+    uri: http://localhost/callback
